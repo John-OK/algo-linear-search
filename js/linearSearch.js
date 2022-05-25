@@ -14,3 +14,14 @@ exports.linearSearch = function(valueToFind, arrayToSearchThrough) {
 
     return indexOfValue;
 };
+
+exports.linearSearchGlobal = function(valueToFind, arrayToSearchThrough) {
+    let indicesOfValues = [];
+    for (let i = 0; i < arrayToSearchThrough.length; i++) {
+        if (arrayToSearchThrough[i] === valueToFind) {
+            indicesOfValues.push(i);
+        }
+    }
+
+    return indicesOfValues;
+};
