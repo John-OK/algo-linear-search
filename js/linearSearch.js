@@ -4,6 +4,13 @@ for (let i = 1; i <= 1000; i++) {
 }
 
 exports.linearSearch = function(valueToFind, arrayToSearchThrough) {
+    let indexOfValue = undefined;
 
+    for (let i = 0; i < arrayToSearchThrough.length; i++) {
+        if (arrayToSearchThrough[i] === valueToFind) {
+            indexOfValue = i;
+        }
+    }
+
+    return indexOfValue;
 };
-
