@@ -3,18 +3,17 @@ for (let i = 1; i <= 1000; i++) {
     arrayToSearchThrough.push(i);
 }
 
+// Basic version
 exports.linearSearch = function(valueToFind, arrayToSearchThrough) {
-    let indexOfValue = undefined;
-
     for (let i = 0; i < arrayToSearchThrough.length; i++) {
         if (arrayToSearchThrough[i] === valueToFind) {
-            indexOfValue = i;
+            return i;
         }
     }
-
-    return indexOfValue;
+    return undefined;
 };
 
+// Global version
 exports.linearSearchGlobal = function(valueToFind, arrayToSearchThrough) {
     let indicesOfValues = [];
     for (let i = 0; i < arrayToSearchThrough.length; i++) {
